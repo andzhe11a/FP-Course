@@ -215,6 +215,9 @@ main = do
 
     print (powFunc 2 3)
 
+    print(containsK 123 2)
+    print(countKOccurances 1232 2)
+
     print (isLeapYear 2024)
 
     print (countMultiplesOf5Or9 10)
