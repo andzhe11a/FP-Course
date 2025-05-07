@@ -37,11 +37,11 @@ myFoldr _ acc []     = acc
 myFoldr f acc (x:xs) = f x (myFoldr f acc xs)
 
 myFoldl1 :: (a -> a -> a) -> [a] -> a
-myFoldl1 _ []     = []
-myFoldl1 f (x:xs) = myFoldl f x xs
+myFoldl1 _ []     = error "empty list"
+myFoldl1 f (x:xs) = foldl f x xs
 
 myFoldr1 :: (a -> a -> a) -> [a] -> a
-myFoldr1 _ []     = []
+myFoldr1 _ []     = error "empty list"
 myFoldr1 f [x]    = x
 myFoldr1 f (x:xs) = f x (myFoldr1 f xs)
 
